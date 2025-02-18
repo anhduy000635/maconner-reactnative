@@ -54,7 +54,7 @@ function SiteHeader() {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
         {/* Left Section */}
         <View style={styles.leftSection}>
@@ -170,15 +170,19 @@ function SiteHeader() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    width: "100%",
+  safeContainer: {
+    backgroundColor: "#fff",
   },
   container: {
+    flex: 1,
+    width: "100%",
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 12,
+    justifyContent: "space-between",
     height: 56,
-    width: "100%",
+    paddingHorizontal: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: "#ddd",
   },
   leftSection: {
     alignItems: "flex-start",
